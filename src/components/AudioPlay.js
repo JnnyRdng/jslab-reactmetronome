@@ -31,11 +31,11 @@ export default class AudioPlay extends Component {
         
         if (this.state.audioPlaying === true) {
             this.setState({ audioPlaying: false });
-            this.button.value = "Play";
+            this.button.textContent = "Play";
             clearInterval(this.interval);
         } else {
             this.setState({ audioPlaying: true });
-            this.button.value = "Pause";
+            this.button.textContent = "Pause";
             this.beep(); 
         } 
         
@@ -57,7 +57,7 @@ export default class AudioPlay extends Component {
     render() {
         return (
             <Fragment>
-                <input type="button" value="Play" ref={(button) => this.button = button} onClick={ this.toggleAudio } />
+                <button ref={(button) => this.button = button} onClick={this.toggleAudio}>Play</button>
             </Fragment>
         )
     }

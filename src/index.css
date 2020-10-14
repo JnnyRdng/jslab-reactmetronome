@@ -25,7 +25,7 @@ code {
 h2{
   font-size: 45px;
 }
-input, select{
+button, select{
   margin: 10px;
   width: 100%;
   padding: 10px;
