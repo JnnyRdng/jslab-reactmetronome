@@ -5,9 +5,36 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(226, 226, 226);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.flex{
+  margin: 0 auto;
+  width: 50%;
+  display: flex;
+}
+.flex > div{
+  width: 50%;
+}
+
+h2{
+  font-size: 45px;
+}
+input, select{
+  margin: 10px;
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(32, 228, 163);
+  background:  rgb(32, 228, 163);
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: bold;
+}
+input[type=range]{
+  width: 50%;
 }

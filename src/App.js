@@ -7,6 +7,7 @@ import MetronomeWrapper from './containers/MetronomeWrapper';
 export default function App() {
   return (
     <div className="App">
+      <h1>Metronomical</h1>
       <MetronomeWrapper />
     </div>
   );
