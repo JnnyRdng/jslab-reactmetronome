@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: 'Roboto', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rgb(226, 226, 226);
@@ -34,6 +32,7 @@ button, select{
   color: rgb(255, 255, 255);
   font-size: 20px;
   font-weight: bold;
+  font-family: 'Roboto', sans-serif;
 }
 input[type=range]{
   width: 50%;
