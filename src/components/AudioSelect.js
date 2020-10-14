@@ -48,14 +48,15 @@ export default class AudioSelector extends Component {
         
         return(
             <FormControl variant="outlined" className="audio-select">
-                <InputLabel htmlFor="metronome-dropdown">Metronome Sound</InputLabel>
+                <InputLabel id="metronome-dropdown">Metronome Sound</InputLabel>
                 <Select 
+                        labelId="metronome-dropdown"
+                        id="metronome-dropdown"
                         onChange={ this.audioSelect } 
-                        defaultValue={this.state.audioTypes[0].data}
-                        inputProps={{
-                            name: 'Metronome Sound',
-                            id: 'metronome-dropdown',
-                        }}>
+                        defaultValue=""
+                        label="Metronome Sound"
+                        >
+                    <MenuItem value="" disabled><em>Chose a sound</em></MenuItem>
                     {options}
                 </Select>
             </FormControl>
