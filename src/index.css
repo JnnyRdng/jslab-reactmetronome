@@ -15,24 +15,23 @@ code {
   margin: 0 auto;
   width: 50%;
   display: flex;
+  align-items: center;
 }
 .flex > div{
   width: 50%;
 }
 
-h2{
-  font-size: 45px;
+.slider{
+  margin: 0 auto;
+  width: 50%;
 }
-button, select{
-  margin: 10px;
+
+.audio-select {
   width: 100%;
-  padding: 10px;
-  border: 2px solid rgb(32, 228, 163);
-  background:  rgb(32, 228, 163);
-  color: rgb(255, 255, 255);
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Roboto', sans-serif;
+}
+
+h2{
+  font-size: 50px;
 }
 input[type=range]{
   width: 50%;

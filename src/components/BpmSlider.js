@@ -1,14 +1,15 @@
 // Imports
 import React from "react";
+import Slider from '@material-ui/core/Slider';
 
 export default function BPMSlider(props) {
 
-    function updateSlider(event) {
-        props.updateBPM(event.target.value);
+    function updateSlider(event, value) {
+        props.updateBPM(value);
     }
 
     return (
-        <input type="range" id="bpm-slider" min={15} max={240} defaultValue={props.count} onChange={ updateSlider } />
+        <Slider min={15} max={240} defaultValue={100} onChange={ updateSlider } valueLabelDisplay="off" />
     );
 
 }

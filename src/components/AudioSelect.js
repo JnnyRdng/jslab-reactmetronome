@@ -1,5 +1,9 @@
 // Imports
 import React, { Component } from 'react';
+import Select from '@material-ui/core/Select';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import InputLabel from '@material-ui/core/InputLabel';
 
 // Build component - AudioSelector
 export default class AudioSelector extends Component {
@@ -38,15 +42,23 @@ export default class AudioSelector extends Component {
     render() {
         const options = this.state.audioTypes.map((sound, i) => {
             return (
-                <option key={i} value={sound.data}>{sound.name}</option>
+                <MenuItem key={i} value={sound.data}>{sound.name}</MenuItem>
             )
         });
         
         return(
-            <select onChange={ this.audioSelect } defaultValue="default">
-                <option disabled value="default">Chose a sound...</option>
-                {options}
-            </select>
+            <FormControl variant="outlined" className="audio-select">
+                <InputLabel htmlFor="metronome-dropdown">Metronome Sound</InputLabel>
+                <Select 
+                        onChange={ this.audioSelect } 
+                        defaultValue={this.state.audioTypes[0].data}
+                        inputProps={{
+                            name: 'Metronome Sound',
+                            id: 'metronome-dropdown',
+                        }}>
+                    {options}
+                </Select>
+            </FormControl>
         );
     }
 

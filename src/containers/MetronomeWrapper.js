@@ -44,11 +44,11 @@ export default class MetronomeWrapper extends Component {
                     </div>
                     <div>
                         <AudioSelector changeSound={ this.onSoundChange } />
-                        <AudioPlayer count={ this.state.bpm } sound={this.state.sound} />
+                        <AudioPlayer count={ this.state.bpm } sound={this.state.sound} classes={ this.props.classes }/>
                     </div>
                 </div>
-                <div>
-                    <BPMSlider count={ this.state.bpm } updateBPM={ this.onBPMUpdate } />
+                <div className="slider">
+                    <BPMSlider count={ this.state.bpm } updateBPM={ this.onBPMUpdate }/>
                 </div>
             </main>
         );
